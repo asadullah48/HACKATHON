@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+    font-family:'Courier New', Courier, monospace
+    margin: 1;
+    padding: 30px;
+    background-color: #dfcadf
+}
+
+header {
+    text-align: right;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+section {
+    background: #cee7ea;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2.5px rgba(218, 103, 157, 0.1);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
