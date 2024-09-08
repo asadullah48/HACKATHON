@@ -1,9 +1,8 @@
-/* styles.css */
 body {
     font-family:'Courier New', Courier, monospace
-    margin: .90;
-    padding: 39px;
-    background-color: #456745;
+    margin: 1;
+    padding: 30px;
+    background-color: #bcbcbc
 }
 
 header {
@@ -17,11 +16,11 @@ img {
 }
 
 section {
-    background: #979ba1e0;
+    background: #cee7ea;
     margin: 20px 0;
     padding: 10px;
-    border-radius: 2px;
-    box-shadow: 0 1px 2.5px rgba(32, 31, 32, 0.719);
+    border-radius: 4px;
+    box-shadow: 0 1px 2.5px rgba(218, 103, 157, 0.1);
 }
 
 @media (max-width: 600px) {
@@ -34,3 +33,11 @@ section {
         height: 100px;
     }
 }
+h1{
+    color: color-mix(in srgb, color percentage, color percentage);
+    background: scroll;
+    text-align: right;
+  }
+  body{
+    color: rgb(22, 58, 22);
+  }
