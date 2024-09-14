@@ -3,49 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Static Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 class="intro">Static Resume</h1>
-    
-    <header>
-        <h1>Asadullah Shafique</h1>
-        <p>Email: asadullahshafique@hotmail.com | Cellphone: +92 3213771445</p>
-        <img src="image/Resume.jpg" alt="Profile Picture">
-        </header>
-    <h2>Personal Summary</h2>
-    <p>I am looking to strive for an executive position in a company that promises career growth & development.  I'm a mature team worker & adaptable to all challenging situations.</p>
+<body></body>
+    <div class="resume-container">
+        <!-- Left Section -->
+         <div class="left-section">
+            <img src="Resume.jpg" alt="Profile Picture" class="profile-picture">
+            <section id="objective">
+                <h3 style="color: grey;">Career Objective</h3>
+                <p style="text-align: justify; hyphens: auto;">Securing an employment opportunity in a progressive organization, where I can utilize my professional skills and knowledge adding value to the growth of the organization.</p>
+            </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>Pursing Artifical Intelligence, Web 3.0 & Metaverse - Governor Sindh Kamran Khan Tessori's (2024-Current)</li>
-            <li>Alim (Bachelor in Islamic Studies) - Burooj Institute  (2018-2023)</li>
-            <li>Textile Technology - Textile Institute Of Pakistan (1995-1997)</li>
-        </ul>
-    </section>
+            <section id="certification">
+                <h3 style="color: grey;">Current Scenario</h3>
+                <p><b>Pursuing Artificial Intelligence, Web 3.0 & Metaverse</p>
+                    <section id="Interest">
+                        <h3 style="color: grey;">Activies</h3>
+                        <p style="text-align: justify; hyphens: auto;">Outdoor Sport, Travelling, Exploring different Culture/Foods, Learning & Adopting new trends .</p>
+                    </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Full-Stack Developer </li>
-            <li>Freelancer</li>
-            <li>Digital Marketer</li>
-            <li>Content Writing</li>
-            <li>Video Editor</li>
-        </ul>
-    </section>
 
-    <section id="experience">
-        <h2>Work Experience 25 years in Knits Industry(Hosiery)</h2>
-        <ul>
-            <li>Production Executive - D & N (2024-Present)</li>
-        </ul>
-    </section>
+            </section>
+         </div>
 
-    <button id="toggleSkills">Toggle Skills</button>
 
-    <script src="index.ts"></script>
+    <div class="right-section">
+       <h1>Static Resume Builder</h1>
+               
+       <section id="personal-info">
+           <h3>Personal Information</h3>
+           <p><b>Name:</b> Asadullah Shafique</p>
+           <p><b>Phone:</b> +92 321 377 1445</p>
+           <p><b>Email:</b> <a href="mailto:asadullahshafique@hotmail.com">asadullahshafique@hotmail.com</a></p>
+           <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/asadullah-shafique-a00679325" target="_blank">www.LinkedIn.com</a></p>
+           
+           </section>
+         
+         <section id="education">
+            <h3>Education</h3>
+            <p><b>Alim Islamic Studies (2023):</b> From Burooj Institute KARACHI-PAKISTAN </p>
+            <p><b>BS Textile (2000):</b> From Textile Institute Of Pakistan ( A Project of APTMA) KARACHI-PAKISTAN</p>
+            <p><b>H.S.C pre-engineering (1994):</b> Higher School Certificate from Pakistan Shipowner's Government College, KARACHI-PAKISTAN</p>
+            <p><b>S.S.C Science (1992) :</b> Secondary School Certificate from Ladybird Grammar School, KARACHI-PAKISTAN</p>
+          </section>
+                  
+           <section id="skills">
+            <h3>Skills</h3>
+            <ul>
+                
+                <li>Full-Stack Developer | Python | Next.js | Typescript </li>
+                <li>Freelancer | New Texchnology Enthusiastic</li>
+                <li>Content Writing | Statistical Analysis </li>
+                <li>Digital Marketer | Video Editor </li>
+                <li>Microsoft 365 | Communication Expertise </li>
+                  </ul>
+           </section>
+
+           
+            <section id="work-experience">
+                <h3>Work Experience</h3>
+                <p>25 Years Experience in Knits Industry (Fabricration | Production | Merchandizing | Import/Export) </p>
+            </section>
+
+            
+             <button id="toggle-skills"><b>Hide/Show Skills</b></button>
+        </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+   
+       
