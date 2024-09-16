@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editable Resume</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Edit Your Resume</h1>
+    <h1>Dynamic Resume Builder</h1>
+    <form id="resume-form">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
 
-    <div id="resume">
-      <h2>Personal Information</h2>
-      <p><strong>Name:</strong> <span class="editable" id="resume-name">Asadullah Shafique</span></p>
-      <p><strong>Email:</strong> <span class="editable" id="resume-email">asadullahshafique@hotmail.com</span></p>
-      <p><strong>Phone:</strong> <span class="editable" id="resume-phone">03213771445</span></p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
 
-      <h2>Education</h2>
-      <p class="editable" id="resume-education">Textile Technology</p>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </fieldset>
 
-      <h2>Experience</h2>
-      <p class="editable" id="resume-experience">25 years working experience as Textile Technology</p>
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="Enter your education" rows="4" required></textarea>
+        </fieldset>
 
-      <h2>Skills</h2>
-      <p class="editable" id="resume-skills"> Content Writing, Video Editor, Python , JavaScript, TypeScript, React, Next.js</p>
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience:</label>
+            <textarea id="experience" placeholder="Enter your work experience" rows="4" required></textarea>
+        </fieldset>
 
-      <button id="edit-resume">Edit</button>
-    </div>
-  </div>
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" placeholder="Enter your skills" rows="4" required></textarea>
+        </fieldset>
 
-  <script src="script.js"></script>
+        <button type="submit"><b>Generate Resume</b></button>
+    </form>
+
+    <br>
+
+    <!-- Dynamic Resume -->
+     <div id="resume-display">
+        <!-- Resume will be genrated below -->
+     </div>
+
+     <script src="script.js"></script>
+
 </body>
 </html>

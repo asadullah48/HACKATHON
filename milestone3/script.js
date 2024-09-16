@@ -1,36 +1,23 @@
-// Function to make the resume editable
-function makeResumeEditable() {
-    var editableElements = document.querySelectorAll('.editable');
-    editableElements.forEach(function (element) {
-        element.addEventListener('click', function () {
-            var target = element;
-            var originalText = target.textContent || '';
-            // Create an input field for editing
-            var inputField = document.createElement('input');
-            inputField.type = 'text';
-            inputField.value = originalText;
-            // Replace the clicked element with the input field
-            target.replaceWith(inputField);
-            inputField.focus();
-            // Save changes when the input loses focus or Enter key is pressed
-            inputField.addEventListener('blur', function () { return saveChanges(inputField, target); });
-            inputField.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter') {
-                    saveChanges(inputField, target);
-                }
-            });
-        });
-    });
-}
-// Function to save the changes made to the editable fields
-function saveChanges(inputField, target) {
-    var updatedText = inputField.value || 'Not provided';
-    target.textContent = updatedText;
-    // Replace the input field with the updated text
-    inputField.replaceWith(target);
-}
-// Initialize the resume editing feature
-var editButton = document.getElementById('edit-resume');
-editButton.addEventListener('click', function () {
-    makeResumeEditable();
+// Get references to the form and display area
+var form = document.getElementById('resume-form');
+var resumeDisplayElement = document.getElementById('resume-display');
+// Handle form submission
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // prevent page reload
+    // Collect input values
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var education = document.getElementById('education').value;
+    var experience = document.getElementById('experience').value;
+    var skills = document.getElementById('skills').value;
+    // Generate the resume content dynamically
+    var resumeHTML = "\n    <h2><b>Resume</b></h2>\n    <h3>Personal Information</h3>\n    <p><b>Name:</b>".concat(name, "</p>\n    <p><b>Email:</b>").concat(email, "</p>\n    <p><b>Phone:</b>").concat(phone, "</p>\n\n    <h3>Education</h3>\n    <p>").concat(education, "</p>\n\n    <h3>Experience</h3>\n    <p>").concat(experience, "</p>\n\n    <h3>Skills</h3>\n    <p>").concat(skills, "</p>\n    ");
+    // Display the generated resume
+    if (resumeDisplayElement) {
+        resumeDisplayElement.innerHTML = resumeHTML;
+    }
+    else {
+        console.error('The resume display element is missing.');
+    }
 });
