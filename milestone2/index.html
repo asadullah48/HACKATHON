@@ -3,53 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Resume Builder</title>
+    <title>Static Resume Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Dynamic Resume Builder</h1>
-    <form id="resume-form">
-        <fieldset>
-            <legend>Personal Information</legend>
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
+<body></body>
+    <div class="resume-container">
+        <!-- Left Section -->
+         <div class="left-section">
+            <img src="Resume.jpg" alt="Profile Picture" class="profile-picture">
+            <section id="objective">
+                <h3 style="color: grey;">Career Objective</h3>
+                <p style="text-align: justify; hyphens: auto;">Securing an employment opportunity in a progressive organization, where I can utilize my professional skills and knowledge adding value to the growth of the organization.</p>
+            </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
+            <section id="certification">
+                <h3 style="color: grey;">Current Scenario</h3>
+                <p><b>Pursuing Artificial Intelligence, Web 3.0 & Metaverse</p>
+                    <section id="Interest">
+                        <h3 style="color: grey;">Activies/Hobbies</h3>
+                        <p style="text-align: justify: ;; hyphens: auto;">Outdoor Sport, Travelling, Exploring different Culture/Foods & Adopting new trends .</p>
+                    </section>
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" placeholder="Enter your phone number" required>
-        </fieldset>
 
-        <fieldset>
-            <legend>Education</legend>
-            <label for="education">Education:</label>
-            <textarea id="education" placeholder="Enter your education" rows="4" required></textarea>
-        </fieldset>
+            </section>
+         </div>
 
-        <fieldset>
-            <legend>Experience</legend>
-            <label for="experience">Experience:</label>
-            <textarea id="experience" placeholder="Enter your work experience" rows="4" required></textarea>
-        </fieldset>
 
-        <fieldset>
-            <legend>Skills</legend>
-            <label for="skills">Skills:</label>
-            <textarea id="skills" placeholder="Enter your skills" rows="4" required></textarea>
-        </fieldset>
+    <div class="right-section">
+       <h1>Static Resume Builder</h1>
+               
+       <section id="personal-info">
+           <h3>Personal Information</h3>
+           <p><b>Name:</b> Asadullah Shafique</p>
+           <p><b>Phone:</b> +92 321 377 1445</p>
+           <p><b>Email:</b> <a href="mailto:asadullahshafique@hotmail.com">asadullahshafique@hotmail.com</a></p>
+           <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/asadullah-shafique-a00679325" target="_blank">www.LinkedIn.com</a></p>
+           
+           </section>
+         
+         <section id="education">
+            <h3>Education</h3>
+            <p><b>Alim Islamic Studies (2023):</b> From Burooj Institute KARACHI-PAKISTAN </p>
+            <p><b>BS Textile (2000):</b> From Textile Institute Of Pakistan ( A Project of APTMA) KARACHI-PAKISTAN</p>
+            <p><b>H.S.C pre-engineering (1994):</b> Higher School Certificate from Pakistan Shipowner's Government College, KARACHI-PAKISTAN</p>
+            <p><b>S.S.C Science (1992) :</b> Secondary School Certificate from Ladybird Grammar School, KARACHI-PAKISTAN</p>
+          </section>
+                  
+           <section id="skills">
+            <h3>Skills</h3>
+            <ul>
+                
+                <li>Full-Stack Developer | Python | Next.js | Typescript </li>
+                <li>Freelancer | New Texchnology Enthusiastic</li>
+                <li>Content Writing | Statistical Analysis </li>
+                <li>Digital Marketer | Video Editor </li>
+                <li>Microsoft 365 | Communication Expertise </li>
+                  </ul>
+           </section>
 
-        <button type="submit"><b>Generate Resume</b></button>
-    </form>
+           
+            <section id="work-experience">
+                <h3>Work Experience</h3>
+                <p>25 Years Experience in Knits Industry (Fabricration | Production | Merchandizing | Import/Export) </p>
+            </section>
 
-    <br>
-
-    <!-- Dynamic Resume -->
-     <div id="resume-display">
-        <!-- Resume will be genrated below -->
-     </div>
-
-     <script src="script.js"></script>
-
+            
+             <button id="toggle-skills"><b>Hide/Show Skills</b></button>
+        </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+   
+       

@@ -1,85 +1,83 @@
-/* Styling form and resume sections */
-
+/* General Styling */
 body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-  margin: 20px;
-  padding: 0;
-  background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #1150203f;
+    margin: 0;
+    padding: 150px;
 }
 
-form {
-  margin: auto;
-  background-color: rgb(238, 245, 237);
-  border-radius: 7px;
-  box-shadow: 0 4px 8px rgba(109, 212, 12, 0.726);
-  padding: 21px;
-  max-width: 600px;
+.resume-container {
+    display: flex;
+    background-color: rgb(245, 236, 208);
+    width: 110%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section Styling */
+.left-section {
+    background-color: #071038d5;
+    color: lightgray;
+    padding: 20px;
+    width: 29%;
+    text-align: center;
+    border-right: 5px solid #3f7e5288;
+}
+
+.profile-picture {
+    width: 215px;
+    height: 215px;
+    margin-top: 10%;
+    border-radius: 100%;
+    border: 5px solid #071038d5;
+    margin-bottom: 20px;
 }
 
 h1 {
-  text-align: center;
-  color: whitesmoke;
+    font-size: 41px;
+    color: darkgreen;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-fieldset {
-  border: 2px solid rgba(82, 94, 231, 0.87);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: aliceblue;
+h3 {
+    font-size: 18px;
+    padding: 2%;
+    margin: 20px 0 10px;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #021924;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-legend {
-  font-weight: bold;
-  text-align: left;
-  color: rgb(37, 3, 17);
+ul {
+    list-style-type: fill round;
+    padding: 10;
+    margin: 10px 0;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  color: black;
-
+ul li {
+    margin: 5px 0;
 }
 
-input,textarea {
-  margin-top: 4px;
-  padding: 8px;
-  width: calc(100% - 1px);
-  border: 1px solid rgba(57, 243, 165, 0.856);
-  border-radius: 4px;
-  box-sizing: border-box;
+/* Right Section Styling */
+.right-section {
+    padding: 20px;
+    width: 65%;
 }
 
 button {
-  display: block;
-  width: 100%;
-  background-color: rgba(211, 189, 93, 0.925);
-  color: black;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.829);
-  margin-top: 10px;
-  font-size: 18px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding: 10px;
-  cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
-button :hover {
-  color: rgba(2, 2, 37, 0.884);
-}
-
-#resume-display {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border: 2px solid rgb(61, 115, 136);
-  border-radius: 8px;
-  background-color: rgb(228, 242, 255);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-#resume-display h2 {
-  color: black;
+button:hover {
+    background-color: #270507e5;
 }
