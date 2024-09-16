@@ -1,25 +1,41 @@
-const form = document.getElementById('resume-form') as HTMLFormElement;
-const displayName = document.getElementById('display-name') as HTMLElement;
-const displayEmail = document.getElementById('display-email') as HTMLElement;
-const displayEducation = document.getElementById('display-education') as HTMLElement;
-const displayWork = document.getElementById('display-work') as HTMLElement;
-const displaySkills = document.getElementById('display-skills') as HTMLElement;
-const resumeSection = document.getElementById('resume') as HTMLElement;
+// Get references to the form and display area
+const formdu = document.getElementById('resume-form') as HTMLFormElement;
+const resumeDisplayElement = document.getElementById('resume-display') as HTMLDivElement;
 
-form.addEventListener('submit', (event: Event) => {
-  event.preventDefault();
-  
-  const name = (document.getElementById('name') as HTMLInputElement).value;
-  const email = (document.getElementById('email') as HTMLInputElement).value;
-  const education = (document.getElementById('education') as HTMLInputElement).value;
-  const work = (document.getElementById('work') as HTMLInputElement).value;
-  const skills = (document.getElementById('skills') as HTMLInputElement).value;
+// Handle form submission
+formdu.addEventListener('submit', (event: Event) => {
+    event.preventDefault(); // prevent page reload
 
-  displayName.textContent = Name: ${name};
-  displayEmail.textContent = Email: ${email};
-  displayEducation.textContent = Education: ${education};
-  displayWork.textContent = Work Experience: ${work};
-  displaySkills.textContent = Skills: ${skills};
+    // Collect input values
+    const name = (document.getElementById('name') as HTMLInputElement).value
+    const email = (document.getElementById('email') as HTMLInputElement).value
+    const phone = (document.getElementById('phone') as HTMLInputElement).value
+    const education = (document.getElementById('education') as HTMLInputElement).value
+    const experience = (document.getElementById('experience') as HTMLInputElement).value
+    const skills = (document.getElementById('skills') as HTMLInputElement).value
 
-  resumeSection.style.display = 'block';
+    // Generate the resume content dynamically
+    const resumeHTML = `
+    <h2><b>Resume</b></h2>
+    <h3>Personal Information</h3>
+    <p><b>Name:</b>${name}</p>
+    <p><b>Email:</b>${email}</p>
+    <p><b>Phone:</b>${phone}</p>
+
+    <h3>Education</h3>
+    <p>${education}</p>
+
+    <h3>Experience</h3>
+    <p>${experience}</p>
+
+    <h3>Skills</h3>
+    <p>${skills}</p>
+    `;
+
+    // Display the generated resume
+    if(resumeDisplayElement){
+        resumeDisplayElement.innerHTML = resumeHTML;
+    }else {
+        console.error('The resume display element is missing.');
+    }
 });
