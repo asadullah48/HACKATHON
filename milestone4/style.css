@@ -1,0 +1,84 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    margin: 21px;
+    padding: 0.01;
+    background-color: black;
+  }
+  
+  form {
+    margin: auto;
+    background-color: rgb(238, 245, 237);
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(109, 212, 12, 0.726);
+    padding: 21px;
+    max-width: 600px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: whitesmoke;
+  }
+  
+  fieldset {
+    border: 2px solid rgba(82, 94, 231, 0.87);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+  }
+  
+  legend {
+    font-weight: bold;
+    text-align: left;
+    color: rgb(37, 3, 17);
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    color: black;
+  
+  }
+  
+  input,textarea {
+    margin-top: 4px;
+    padding: 8px;
+    width: calc(100% - 1px);
+    border: 1px solid rgba(57, 243, 165, 0.856);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    background-color: rgba(211, 189, 93, 0.925);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.829);
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button :hover {
+    color: rgba(2, 2, 37, 0.884);
+  }
+  
+  #resume-display {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgb(61, 115, 136);
+    border-radius: 8px;
+    background-color: rgb(228, 242, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+  
+  #resume-display h2 {
+    color: black;
+  }
