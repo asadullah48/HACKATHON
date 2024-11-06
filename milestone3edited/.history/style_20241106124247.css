@@ -22,14 +22,14 @@
     border: 1px solid  rgb(33, 37, 31);
   }
   .backgroundfirscol {
-    background-color: rgb(238, 204, 153) ;
+    background-color: 160, 194, 120) ;
     border-radius: 5px;
     padding: 10px;
     
   }
   
   .backgroundfirscol:hover {
-    border: 1px solid  rgb(107, 114, 99);
+    border: 1px solid  rgb(114, 108, 99);
     transition: box-shadow 0.3s ease-in-out;
     
   }

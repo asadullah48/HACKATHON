@@ -29,7 +29,7 @@
   }
   
   .backgroundfirscol:hover {
-    border: 1px solid  rgb(107, 114, 99);
+    border: 1px solid  rgb(114, 108, 99);
     transition: box-shadow 0.3s ease-in-out;
     
   }
