@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dynamic Resume Builder</title>
+  </head>
+  <body>
+    <!-- here goes html code  -->
+
+    <div class="container" id="cv-form">
+      <h1 class="text-center my-2">Dynamic Resume Builder</h1>
+      <p class="text-center">Resume Generate App by Asadullah Shafique</p>
+      <div class="row">
+        <div class="col-md-5">
+          <!-- first side -->
+          <h3>Personal Infromation</h3>
+          <!-- Name field -->
+          <div class="form-group mt-1">
+            <label for="nameField">Your Name</label>
+            <input
+              type="text"
+              id="nameField"
+              placeholder="Enter here"
+              required
+              class="form-control"
+              
+            />
+          </div>
+          <!-- Contact field -->
+          <div class="form-group mt-1">
+            <label for="contactField">Your Contact</label>
+            <input
+              type="number"
+              id="contactField"
+              placeholder="Enter here"
+              class="form-control"
+              required
+            />
+          </div>
+          <!-- Address field -->
+          <div class="form-group mt-1">
+            <label for="addressField">Your Address</label>
+            <textarea
+              id="addressField"
+              placeholder="Enter here"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- Image Field -->
+          <div class="form-group mt-3">
+            <label for="">Select Photo</label>
+            <input id="imgField" type="file" class="form-control" />
+          </div>
+
+          <!-- Important LInks-->
+          <p class="text-secondary my-3">Important Links</p>
+
+          <!-- Facebook link -->
+          <div class="form-group mt-1">
+            <label for="fbField">Facebook</label>
+            <input
+              type="text"
+              id="fbField"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+
+          <!-- Email link -->
+          <div class="form-group mt-1">
+            <label for="emailField">Email</label>
+            <input
+              type="email"
+              id="emailField"
+              placeholder="Enter here"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <!-- Linked link -->
+          <div class="form-group mt-1">
+            <label for="linkedField">LinkedIn</label>
+            <input
+              type="text"
+              id="linkedField"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <!-- second side -->
+          <h3>Professional Infromation</h3>
+
+          <!-- Objective field -->
+          <div class="form-group mt-3">
+            <label for>Objective</label>
+            <textarea
+              id="objectiveField"
+              placeholder="Enter here"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- Work experience field -->
+          <div class="form-group mt-3" id="we">
+            <label for>Work Experience</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control weField"
+              rows="3"
+            ></textarea>
+            <div class="container text-center mt-3" id="weAddButton">
+              <button onclick="addNewWeField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Academic Qualification field -->
+          <div class="form-group mt-3" id="aq">
+            <label for>Academic Qualification</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control eqField"
+              rows="3"
+            ></textarea>
+            <div class="container text-center mt-3" id="aqAddButton">
+              <button onclick="addNewAqField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Skills field -->
+          <div class="form-group mt-3" id="skills">
+            <label for>Skills Section</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control ssFied"
+              rows="3"
+            ></textarea>
+            <div class="container text-center mt-3" id="ssAddButton">
+              <button onclick="addNewSsField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center mt-5">
+        <button onclick="generateResume()" class="btn btn-primary btn-lg my-5">
+          Generate Resume
+        </button>
+      </div>
+    </div>
+
+    <!-- Resume Template -->
+    <div class="container mt-5" id="cv-template">
+      <div class="row">
+        <div class="col-md-5 text-center py-5 background">
+          <!-- First col  -->
+          <!-- Image -->
+          <img
+            src="https://www.strasys.uk/wp-content/uploads/2022/02/Depositphotos_484354208_S.jpg"
+            alt="img"
+            class="img-fluid myimg"
+            id="imgTemplate"
+          />
+          <div class="card-header backgroundfirscol mt-4">
+            <h3 class="heading">Personal Information</h3>
+          </div>
+          <div class="card-body mt-4 overflow-auto">
+            <h5>Name:</h5>
+            <p id="nameT1" class="text-size">Asadullah Shafique/p>
+            <h5>Contact:</h5>
+            <p id="contactT" class="text-size">+92 321 3771 445</p>
+            <h5>Address:</h5>
+            <p id="addressT" class="text-size">
+              Karachi, Pakistan
+            </p>
+          </div>
+          <hr />
+          <div class="card-header backgroundfirscol mt-4">
+            <h3 class="heading">Social Media Links</h3>
+          </div>
+          <div class="card-body mt-4 text-size">
+            <p>Facebook: <span id="fbT"></span></p>
+            <p>Email: <span id="emailT"></span></p>
+            <p>Linkedin: <span id="linkedT"></span></p>
+          </div>
+        </div>
+        <div class="col-md-9 py-5">
+          <!-- Second col  -->
+          <!-- Name Heading -->
+          <h1 id="nameT2" class="text-center" style="font-weight: 980">
+            Asadullah Shafique
+          </h1>
+          <!-- Objective cards -->
+          <div class="card mt-5">
+            <div class="card-header background">
+              <h3 class="heading">Objecive</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT" class="text-size">
+                Securing an employment opportunity in a progressive organization, 
+                where I can utilize my professional skills and knowledge 
+                adding value to the growth of the organization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Work experiecne cards -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3 class="heading">Work Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT" class="text-size">
+                
+                  <p>25 Years Experience in Knits Industry (Fabricration | Production | Merchandizing | Import/Export) </p>
+            </section>
+            <div class="download-btn"></div>
+                <a href="./Resume.pdf" download=""><button>Download CV</button></a>
+            </div>
+                
+                <li>
+                  <p class="field">Data Scientist</p>
+                    <p class="experience">Data Scientist with <span>4+ years of broad-based experience in <br> 
+                        building data-intensive applications,</span> overcoming complex <br> 
+                        architectural, and scalability issue in diverse industries. <br> 
+                        Proficient in predictive modeling, data processing, and data <br> 
+                        mining algorithms, as well as scripting languages, including <br> 
+                        Python and Java.</p>
+                </li>
+                <li>
+                  <div class="data_scientist">
+                    <div class="data_head">
+                        <p>Data Scientist</p>
+                    </div>
+                    <div class="data_company">
+                        <p>Future Energy® Limited</p>
+                    </div>
+                    <div class="date_place">
+                        <p>06/2020-Present</p>
+                        <p>Palo Alto, CA</p>
+                    </div>
+                </div>
+                <div class="work_info">
+                    <p>Develop action plans to mitigate risks in decision making while increasing <br> 
+                        profitability by leveraging data science.
+                    </p>
+                    <p>Drive the interaction and partnership between the managers to ensure active <br> 
+                        cooperation in identifying as well as defining analytical needs, and generating the <br> 
+                        pull-through of insights with the business.
+                    </p>
+                    <p>Build predictive models using various machine learning tools to predict the possibility of equipment failure.
+                    </p>
+                    <p>Develop algorithms using Natural Language Processing and Deep Learning models for predictive maintenance.
+                    </p>
+                    <p>Design algorithms to track and detect anomalies in multiple sensors data for the Energy Industry.
+                    </p>
+                    <p>Demonstrate knowledge and execution of application programming interface development and test automation.
+                    </p>
+                </div>
+                
+                <div class="data_analyst">
+                    <div class="data_head">Data Analyst</div>
+                    <div class="data_subhead">THETA Financial Group</div>
+                    <div class="date_place">
+                        <p>03/2016 - 05/2020</p>
+                        <p>San Francisco, CA</p>
+                    </div>
+                    <div class="data_info">
+                        <p>Utilized analytical and technical expertise to provide insights and proposals to support business improvements.
+                            </p>
+                        <p>Evaluated analytical model findings in the Global Monitoring Report, the company's flagship product.
+                            </p>
+                        <p>Conducted business analysis to understand business needs and requirements to translate into conceptual designs.
+                        </p>
+                    </div>
+                </div>
+                <div class="business_analysis">
+                    <div class="business_head">
+                        <p>Business Analyst/Statistician</p>
+                    </div>
+                    <div class="business_subhead">
+                        <p>Maxicare Healthcare</p>
+                    </div>
+                    <div class="date_place">
+                        <p>02/2014-02/2016</p>
+                        <p>San Francisco, CA</p>
+                    </div>
+                    <div class="business_info">
+                        <p>Developed Key Performance Indicators (KPI) and presented it to the management and led to the execution plan.
+                        </p>
+                        <p>Analyzed and produced KPI reports allowing to monitor field service engineer and customer care center closely.</p>
+                    </div>
+                </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Academic Qualification cards -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3 class="heading">Academic Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT" class="text-size">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Optio, similique!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Optio, similique!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Optio, similique!
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Skills section cards -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3 class="heading">Skills Section</h3>
+            </div>
+            <div class="card-body">
+              <ul id="skillsT" class="text-size">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Optio, similique!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Optio, similique!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Optio, similique!
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Button to Print and download CV -->
+          <div class="container mt-3 text-center">
+            <button onclick="printCV()" class="btn background">
+              Print and Download Resume
+            </button>
+            <!-- Button to edit CV -->
+            <div class="container mt-3 text-center">
+              <button onclick="editCV()" class="btn background">
+                Edit Resume
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- boot strap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

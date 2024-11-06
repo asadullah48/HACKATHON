@@ -1,0 +1,102 @@
+/* #cv-form{
+    display: none;
+} */
+
+#cv-template {
+    display: an;
+  }
+  
+  .myimg {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .background {
+    background-color: rgb(244, 198, 128);
+  }
+  
+  .background:hover {
+    background-color: rgb(250, 203, 133);
+    transition: background-color 0.3s ease-in-out;
+    border: 1px solid  rgb(114, 108, 99);
+  }
+  .backgroundfirscol {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    
+  }
+  
+  .backgroundfirscol:hover {
+    border: 1px solid  rgb(114, 108, 99);
+    transition: box-shadow 0.3s ease-in-out;
+    
+  }
+  
+  
+  
+  .text-size{
+    font-size: 16px;
+  }
+  
+  
+  /* Print CV styles */
+  /* Print CV styles */
+  @media print {
+    /* Display only the CV template */
+    body * {
+      display: hidden !important;
+    }
+  
+    #cv-template {
+      display: block !important;
+      width: 100%;
+      background-color: rgb(244, 198, 128); /* Add background color */
+      padding: 20px;
+      -webkit-print-color-adjust: exact; /* Ensure background color prints */
+      print-color-adjust: exact; /* Ensure background color prints */
+    }
+  
+    /* Background fallback for elements */
+    .background {
+      background-color: rgb(244, 198, 128) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  
+    /* Ensure images fit properly */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  
+    /* Remove shadows and transparency */
+    * {
+      box-shadow: none !important;
+      background: transparent !important;
+    }
+  
+    /* Page settings for A4 size */
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+  
+    /* Optional: Adjust text size */
+    .text-size {
+      font-size: 12px;
+    }
+  
+    /* Hide buttons in print */
+    .btn {
+      display: none;
+    }
+  
+    /* Heading style */
+    .heading {
+      color: black !important;
+      font-size: x-large;
+    }
+  }
